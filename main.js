@@ -23,7 +23,7 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3];
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5];
 
 
-// Add your functions below:
+// Function to determine if a given credit card number is valid or invalid, utilizing the Luhn algorithm
 
 function validateCred(arr) {
   var checkSum = 0;
@@ -41,6 +41,7 @@ function validateCred(arr) {
   return checkSum % 10 === 0
 }
 
+// Function that iterates through array of nested arrays and returns a new nested array of invalid credit card numbers
 
 function findInvalidCards(arr) {
   let invalidCards = [];
@@ -53,6 +54,11 @@ function findInvalidCards(arr) {
   }
   return invalidCards
 }
+
+/* 
+Function which iterates through an array of nested arrays, and based on the first digit of the given credit card number, 
+returns an array of companies which have mailed out the invalid credit card numbers
+*/
 
 function idInvalidCardCompanies(arr) {
   let companies = [];
